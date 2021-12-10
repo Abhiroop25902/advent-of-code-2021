@@ -36,9 +36,8 @@ def find_syntax_error_cost(chunk: str):
             raise ValueError('unknown symbol found')
     return 0
 
+
 # part 2
-
-
 def find_completion_cost(chunk: str):
     stack = list()
     for char in chunk:
@@ -63,8 +62,8 @@ def find_completion_cost(chunk: str):
 chunks = [line.rstrip("\n") for line in open(FILE_NAME)]
 
 print(
-    f"error cost = {sum([find_syntax_error_cost(chunk) for chunk in chunks])}")
-
+    f"error cost = {sum([find_syntax_error_cost(chunk) for chunk in chunks])}"
+)
 
 completion_costs = list(filter(
     lambda a: a != 0,
